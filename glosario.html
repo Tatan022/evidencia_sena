@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Glosario Informático</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+    }
+    .buttons, .letters {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .term {
+      display: none;
+      margin-bottom: 15px;
+    }
+    .term dt {
+      font-weight: bold;
+      color: #007bff;
+    }
+    .term dd {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Glosario de Tecnología Informática</h1>
+
+<div class="buttons">
+  <button onclick="mostrarLetras('am')">A - M</button>
+  <button onclick="mostrarLetras('nz')">N - Z</button>
+  <button onclick="mostrarTodos()">Todos</button>
+</div>
+
+<div class="letters" id="letterButtons"></div>
+
+<dl id="glosario">
+  <!-- A - M -->
+  <div class="term" data-letra="A"><dt>Algoritmo</dt><dd>Conjunto de pasos ordenados para resolver un problema.</dd></div>
+  <div class="term" data-letra="B"><dt>Backup</dt><dd>Copia de seguridad de información.</dd></div>
+  <div class="term" data-letra="C"><dt>Compilador</dt><dd>Convierte código fuente en lenguaje máquina.</dd></div>
+  <div class="term" data-letra="D"><dt>Depuración</dt><dd>Eliminación de errores en software.</dd></div>
+  <div class="term" data-letra="F"><dt>Firewall</dt><dd>Filtra el tráfico de red.</dd></div>
+  <div class="term" data-letra="H"><dt>HTML</dt><dd>Lenguaje para estructurar páginas web.</dd></div>
+  <div class="term" data-letra="I"><dt>IP</dt><dd>Dirección de un dispositivo en la red.</dd></div>
+  <div class="term" data-letra="J"><dt>Java</dt><dd>Lenguaje de programación orientado a objetos.</dd></div>
+  <div class="term" data-letra="K"><dt>Kernel</dt><dd>Núcleo de un sistema operativo.</dd></div>
+  <div class="term" data-letra="L"><dt>Login</dt><dd>Inicio de sesión en un sistema.</dd></div>
+  <div class="term" data-letra="M"><dt>Malware</dt><dd>Software malicioso que afecta el sistema.</dd></div>
+
+  <!-- N - Z -->
+  <div class="term" data-letra="N"><dt>Network</dt><dd>Red de dispositivos conectados.</dd></div>
+  <div class="term" data-letra="O"><dt>Open Source</dt><dd>Código abierto y libre.</dd></div>
+  <div class="term" data-letra="P"><dt>Python</dt><dd>Lenguaje de programación versátil.</dd></div>
+  <div class="term" data-letra="Q"><dt>Query</dt><dd>Consulta a base de datos.</dd></div>
+  <div class="term" data-letra="R"><dt>Router</dt><dd>Dispositivo que enruta datos.</dd></div>
+  <div class="term" data-letra="S"><dt>Servidor</dt><dd>Equipo que ofrece servicios a otros.</dd></div>
+  <div class="term" data-letra="T"><dt>Trojan</dt><dd>Software malicioso oculto.</dd></div>
+  <div class="term" data-letra="U"><dt>USB</dt><dd>Puerto de conexión de dispositivos.</dd></div>
+  <div class="term" data-letra="V"><dt>VPN</dt><dd>Red privada virtual.</dd></div>
+  <div class="term" data-letra="W"><dt>Web</dt><dd>Sistema de documentos en Internet.</dd></div>
+  <div class="term" data-letra="X"><dt>XML</dt><dd>Lenguaje de marcado.</dd></div>
+  <div class="term" data-letra="Y"><dt>Yottabyte</dt><dd>Unidad de almacenamiento.</dd></div>
+  <div class="term" data-letra="Z"><dt>ZIP</dt><dd>Formato de compresión de archivos.</dd></div>
+</dl>
+
+<script>
+  function mostrarLetras(rango) {
+    const letterDiv = document.getElementById('letterButtons');
+    letterDiv.innerHTML = '';
+    const letras = rango === 'am'
+      ? 'ABCDEFGHIJKLM'.split('')
+      : 'NOPQRSTUVWXYZ'.split('');
+
+    letras.forEach(letra => {
+      const btn = document.createElement('button');
+      btn.textContent = letra;
+      btn.onclick = () => filtrarPorLetra(letra);
+      letterDiv.appendChild(btn);
+    });
+
+    filtrarPorLetra(null); // Oculta términos hasta seleccionar letra
+  }
+
+  function filtrarPorLetra(letra) {
+    const terminos = document.querySelectorAll('.term');
+    terminos.forEach(t => {
+      if (!letra) {
+        t.style.display = 'none';
+      } else if (t.dataset.letra === letra) {
+        t.style.display = 'block';
+      } else {
+        t.style.display = 'none';
+      }
+    });
+  }
+
+  function mostrarTodos() {
+    document.getElementById('letterButtons').innerHTML = '';
+    const terminos = document.querySelectorAll('.term');
+    terminos.forEach(t => t.style.display = 'block');
+  }
+
+  // Mostrar todos por defecto
+  window.onload = mostrarTodos;
+</script>
+
+</body>
+</html>
