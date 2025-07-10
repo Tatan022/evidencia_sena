@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion"
+    content="landing page personal de Sebastian Acosta Jaramillo-desarrollador web Frontend.">
+    <title>Sebastian Acosta Jaramillo - Desarrollador Web Frontend Especializado en CSS responsive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--header con navegacion responsive -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <h1 class="logo__text">Sebastian Acosta Jaramillo</h1>
+                </div>
+
+                <nav class="nav" role="navigation" arial-label="navegacion principal">
+                    <ul class="nav_list">
+                        <li class="nav__item">
+                            <a href="home" class="nav__link">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">Sobre mí</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="skills" class="nav__link">Habilidades</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact" class="nav__link">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>            
+
+ <!-- about seccion Hero - primera impresion -->
+ <section id="home" class="hero">
+    <div class ="container">
+        <div class="hero__content">
+            <h2 class="hero__tittle">
+                Desarrollador Frontend <br>
+                <span class ="hero__tittle--highlight"> Especializado en CSS Responsive</span>
+            </h2>
+            <p class="hero__description">
+                Creo experiencias web que funcionan perfectamente en todos los dispositivos
+                desde moviles hasta pantallas 4k.
+            </p>
+            <div class="hero__actions">
+                <a href="#contact" class="btn btn--primary">contactar</a>
+                <a href="#about" class="btn btn--secondary">ver mas</a>
+            </div>    
+        </div>
+    </div>
+ </section>
+
+ <!--contenido principal -->
+ <main>
+    <!--seccion sobre mi -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section__title">sobre mi</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>
+                        Soy un Desarrollador Frontend apasionado por crear interfaces de usuario
+                        que no solo se ven increibles , sino que funcionan perfectamente en 
+                        cualquier disposivo.,
+                    </p>
+                    <p>
+                        Especializado en SCC moderno ;  responsive desing y frameworks como
+                        Bootstrap y TailwinddSCC. Siempre en busqueda de las mejores practicas 
+                        y las tecnologias mas actuales.
+                    </p>
+                </div>
+                <div class="about__image">
+                    <div class="placeholder-image">
+                        <!--placeholder para imagen personal-->
+                        <img src="./yotas.jpeg" alt="mi foto">
+                        <span> mi foto </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- seccion habilidades -->
+     <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section__title">habilidades</h2>
+            <div class="skills__grid">
+                <div class="skills-card">
+                    <h3 class="skills-card__title">HTML 5 Semantico</h3>
+                    <p class="skills-card__description">
+                        estructura web accesible y optimizada para SEO
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skills-card__title">CSS3 AvanzaDO</h3>
+                    <p class="skills-card__description">
+                        Grid, Flexbox , animaciones y variables CSS
+                    </p>
+                </div>
+                </div class="skill-card">
+                   <h3 class="skills-card__title">responsive desing</h3>
+                   <p class="skills-card__description">
+                    movile-first, media queries y container queries
+                   </p>
+                </div>
+                <div class="skills-card">
+                    <h3 class="skills-card__title"> performance web </h3>
+                    <p class="skills-card__description">
+                        Optimizacion de carga y experiencia de usuario 
+                    </p>
+                </div>
+            </div>
+        </div>
+     </section>
+ </main>    
+
+ <!--footer-->
+  <footer id="contact" class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <h2 class="footer__title">¿trabajamos juntos?</h2>
+            <p class="footer__description">
+                Estoy disponible para proyectos freelance y oportunidades de colaboracion.
+            </p>
+            </div class="footer__contact">
+             <a href="mailto:sebastianacostajaramillo@gmail.com" class="contact-link">sebastianacostajaramillo@gmail.com</a>
+             <a href="https://github.com/miiUsuario" class="contact-link">github</a>
+             <a href="htpps://linkedin.com/in/miiUsuario" class="contact-link">linkedin</a>
+            </div>  
+        </div>
+    </div>
+  </footer>
+</body>
+
+
+</html>
