@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario Avanzado</title>
+  <link rel="stylesheet" href="Style.css"/>
+</head>
+<body>
+  <div class="container">
+    <form class="formulario">
+      <h1>🚀 Formulario Avanzado</h1>
+
+      <div class="progress-bar">
+        <div class="progress" style="width: 13%;"></div>
+      </div>
+      <p class="progreso-texto">Progreso: 13%</p>
+
+      <label>Nombre completo *</label>
+      <input type="text" placeholder="pepe perez" required />
+
+      <label>Correo electrónico *</label>
+      <input type="email" placeholder="usuario@dominio.com" required />
+
+      <label>Contraseña *</label>
+      <input type="password" placeholder="Mínimo 8 caracteres" required />
+
+      <label>Confirmar contraseña *</label>
+      <input type="password" placeholder="Repite tu contraseña" required />
+
+      <label>Teléfono *</label>
+      <input type="tel" placeholder="300-123-4567" required />
+
+      <label>Fecha de nacimiento *</label>
+      <input type="date" required />
+
+      <label>Dirección *</label>
+      <input type="text" placeholder="Calle 123 #45-67" required />
+
+      <div class="terminos">
+        <input type="checkbox" id="terminos" required />
+        <label for="terminos">Acepto los términos y condiciones *</label>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
